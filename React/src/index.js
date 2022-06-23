@@ -1,4 +1,7 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-alert("FOMO NOMORE!!!");
-React.createElement('h1', {}, 'Hello World!');
+ReactDOM.render(
+  React.createElement('h1', {}, 'FOMO!'),
+  document.getElementById('root')
+);
