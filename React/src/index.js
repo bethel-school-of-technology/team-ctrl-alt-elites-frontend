@@ -1,4 +1,4 @@
 import React from 'react';
 
-alert("Ctrl Alt Elites are go!!!");
+alert("FOMO NOMORE!!!");
 React.createElement('h1', {}, 'Hello World!');
