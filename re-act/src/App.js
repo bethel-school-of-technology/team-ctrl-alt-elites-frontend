@@ -1,26 +1,27 @@
 
 import './App.css';
-import Home from './pages/home/home.js';
-import { BrowserRouter as Router, Routes, Route}
-    from 'react-router-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 
 function App() {
+
+  
+  
+useEffect (() => {
+  
+}, [])
+
+const getPages = () => {
+  API.getAll().then(res => {
+    console.log(res);
+  })
+}
+
   return (
-    <Router>
-      <Routes>
-        <Route exact path= '/' element={<Home/>} />
-      </Routes>
-    </Router>
-      // <Router>
-      //  { <Navbar />
-      // <Routes>
-      //     <Route exact path='/' element={<Home />} />
-      //     { <Route path='/about' element={<About/>} />
-      //     <Route path='/login' element={<Login/>} />
-      //     <Route path='/search' element={<Search/>} />
-      //      }
-      // </Routes> }
-      // </Router>
+    <div className="App">
+      <pages />
+    </div>
   );
   }
     

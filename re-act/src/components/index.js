@@ -1,28 +1,22 @@
-// import React from "react";
-// import { Nav, NavLink, NavMenu } 
-//     from "./NavbarElements";
+import React from 'react';
+import { render } from 'react-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Login from './pages/Login';
+import Search from './pages/Search';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+
+
+const App = () => (
+    <Router>
+      <div>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/login" component={Login} />
+        <Route path="/search" component={Search} />
+      </div>
+    </Router>
+  );
   
-// const Navbar = () => {
-//   return (
-//     <>
-//       <Nav>
-//         <NavMenu>
-//           <NavLink to="/home" activeStyle>
-//             Home
-//           </NavLink>
-//           <NavLink to="/about" activeStyle>
-//             About
-//           </NavLink>
-//           <NavLink to="/login" activeStyle>
-//             Login
-//           </NavLink>
-//           <NavLink to="/search" activeStyle>
-//             Search
-//           </NavLink>
-//         </NavMenu>
-//       </Nav>
-//     </>
-//   );
-// };
-  
-// export default Navbar;
+  ReactDOM.render(<App />, document.getElementById('root'));
