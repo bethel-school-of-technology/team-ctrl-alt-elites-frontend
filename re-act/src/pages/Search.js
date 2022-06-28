@@ -1,6 +1,10 @@
 import React from 'react';
-import Header from '../components/Header';
 
-const Search = () => <Header title="Search" />;
+
+const Search = () => (
+    <div>
+    <button type="button" class="btn btn-primary">Search</button>
+  </div>
+);
 
 export default Search;

@@ -1,6 +1,10 @@
 import React from 'react';
-import Header from '../components/Header';
 
-const Login = () => <Header title="Login" />;
+
+const Login = () => (
+    <div>
+    <h2>Login</h2>
+  </div>
+);
 
 export default Login;
