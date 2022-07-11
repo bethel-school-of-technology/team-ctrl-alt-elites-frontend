@@ -1,8 +1,14 @@
 import React from 'react';
-
+import Pap from '../Pap';
 
 const Profile = () => 
 (
+  <div>
+          <React.StrictMode>
+            <Pap />
+          </React.StrictMode>
+          
+
     <div style= {{ margin: '1em' }} >
     <div style= {{display: 'flex', flexDirection: 'row', flexBasis: '40%'}}>
     <h1>Profile<br/><br/>
@@ -21,7 +27,7 @@ const Profile = () =>
   
        
         <div>
-            
+        
             <p><small>The Breathe + Bathe wellness series is here! Join Avi Sherbill of SoundRx for a 75-minute journey with breathwork, meditation, & soundbath.</small></p>
             <br/>
             <ul>
@@ -76,6 +82,7 @@ const Profile = () =>
         
    </div>
     
+ </div>
  </div>
 );
 

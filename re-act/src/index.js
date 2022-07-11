@@ -6,12 +6,23 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Search from './pages/Search';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Pap from './Pap';
+
+
+
+
 
 
 
 const App = () => (
-    <Router>
+    
       
+   
+    <Router>
+          
+      
+
+  
       <div >
         <div style= {{  display: 'flex', flexDirection: 'row', justifyContent: 'end'}}>
         
