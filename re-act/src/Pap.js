@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useContext} from 'react';
 import AllProfiles from './components/AllProfiles';
 import API from './services/api';
+import './pap.css';
+
 
 function Pap() {
 
