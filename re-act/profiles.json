@@ -8,8 +8,8 @@
             "Time" : "Sunday July 17th, 6:00 pm - 7:15 pm",
             "Location" : "Venice Beach The Electric Lodge, Venice, CA",
             "Price" : "$60",
-            "Description" : "The Breathe + Bathe wellness series is here! Join Avi Sherbill of SoundRx for a 75-minute journey with breathwork, meditation, & soundbath.",
-            "Details" : "The Breathe + Bathe series is here! Join Avi Sherbill from SoundRx as he guides you through a 75-minute frequency healing session in-studio while you simply relax and close your eyes. It's like a massage on a cellular level!"
+            "Summary" : "The Breathe + Bathe wellness series is here! Join Avi Sherbill of SoundRx for a 75-minute journey with breathwork, meditation, & soundbath.",
+            "Description" : "The Breathe + Bathe series is here! Join Avi Sherbill from SoundRx as he guides you through a 75-minute frequency healing session in-studio while you simply relax and close your eyes. It's like a massage on a cellular level!"
         },
         {
             "profile" : "munDAAANG! L.A.",
@@ -19,8 +19,8 @@
             "Time" : "June 1 - August 4, 2022",
             "Location" : "Downtown Arts District, CA",
             "Price" : "free",
-            "Description" : "See Los Angeles through the eyes of LA-based photographers who are drawn to the often-overlooked elements of our urban landscape.",
-            "Details" : "Sure, people come to L.A. to see the palm trees, the hills and the ocean. But when you walk these streets on the regular, you become much more attuned to L.A.’s more everyday sights—and that’s especially true for the artists in this photography show. Discover beauty in L.A.’s most mundane, overlooked details at this assembly of works from nine SoCal photographers. You’ll find the show, from munDAAANG! magazine and ArtShareLA, at Angel City Brewery (after an opening reception, you can scope it out during the brewery’s regular operating hours)."
+            "Summary" : "See Los Angeles through the eyes of LA-based photographers who are drawn to the often-overlooked elements of our urban landscape.",
+            "Description" : "Sure, people come to L.A. to see the palm trees, the hills and the ocean. But when you walk these streets on the regular, you become much more attuned to L.A.’s more everyday sights—and that’s especially true for the artists in this photography show. Discover beauty in L.A.’s most mundane, overlooked details at this assembly of works from nine SoCal photographers. You’ll find the show, from munDAAANG! magazine and ArtShareLA, at Angel City Brewery (after an opening reception, you can scope it out during the brewery’s regular operating hours)."
         },
         {
             "profile" : "Into the Woods at Descanso Gardens",
@@ -30,8 +30,8 @@
             "Time" : "July 11 - July 17, 2022, 7:30pm",
             "Location" : "Descanso Gardens, La Cañada",
             "Price" : "$30",
-            "Description" : "Descanso is thrilled to present Pacific Opera Project (POP)’s production of Stephen Sondheim’s Into the Woods coming July 8–10 and 15–17. What better place to stage Into the Woods than the actual woods of one of Southern California’s premier outdoor spaces, Descanso Gardens!",
-            "Details" : "Once upon a time in a not-so-far-off garden there lay a Sondheim production staged on the edge of the woods. Pacific Opera Project will tackle Stephen Sondheim’s Into the Woods on the main lawn of Descanso Gardens. Tickets are currently sold out, but you can email Pacific Opera Project to be added to the waitlist (come on, this is L.A.—you know at least a few people are going to flake)."
+            "Summary" : "Descanso is thrilled to present Pacific Opera Project (POP)’s production of Stephen Sondheim’s Into the Woods coming July 8–10 and 15–17. What better place to stage Into the Woods than the actual woods of one of Southern California’s premier outdoor spaces, Descanso Gardens!",
+            "Description" : "Once upon a time in a not-so-far-off garden there lay a Sondheim production staged on the edge of the woods. Pacific Opera Project will tackle Stephen Sondheim’s Into the Woods on the main lawn of Descanso Gardens. Tickets are currently sold out, but you can email Pacific Opera Project to be added to the waitlist (come on, this is L.A.—you know at least a few people are going to flake)."
         }
     ]
 }
