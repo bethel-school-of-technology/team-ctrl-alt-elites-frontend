@@ -29,7 +29,7 @@ return (
             <label htmlFor="summary">Summary of Event</label>
             <br />
             <textarea
-                rows="20"
+                rows="5"
                 cols="50"
                 name="summary"
                 onChange={handleSummaryChange}></textarea>
@@ -42,13 +42,10 @@ return (
                 name="description"
                 onChange={handleDescriptionChange}></textarea>
             <br />
-            <button className="btn" type="Submit">Create Profile</button>
+            <button className="btn btn-dark" type="Submit">Create Profile</button>
         </form>
     </div>
 )
-
-
-
 }
 
 
