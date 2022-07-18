@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
 
+
 const Home = () => 
 (
     <div style= {{ margin: '1em' }} >
     <h1>Home</h1>
     <div style= {{display: 'flex', flexDirection: 'row' }} >
-        <img src= " https://images.unsplash.com/photo-1532347922424-c652d9b7208e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80 " style={{ width: '40%', marginBottom: '1em', marginRight: '1em' }} />
+        <img className="img" src= " https://images.unsplash.com/photo-1532347922424-c652d9b7208e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80 "/>
         <div>
             <h3>"Not all who wander are lost"</h3>
             <p><small>J.R.R. Tolkein</small></p>
