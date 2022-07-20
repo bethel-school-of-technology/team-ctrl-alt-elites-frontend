@@ -8,8 +8,8 @@ const API = {
     getAll: () => {
         return axios.get(baseURL);
     },
-    createProfile: (newProfile) => {
-        return axios.post(baseURL, newProfile)
+    createProfile: (newOwner) => {
+        return axios.post(baseURL, newOwner )
     }
 
 }

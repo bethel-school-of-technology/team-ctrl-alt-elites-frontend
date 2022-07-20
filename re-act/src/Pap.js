@@ -5,6 +5,10 @@ import './pap.css';
 
 
 function Pap() {
+
+
+
+
   const [allProfiles, setAllProfiles] = useState([]);
   const [newProfile, setNewProfile] = useState({
     profile: "",
@@ -16,6 +20,32 @@ function Pap() {
     summary: "",
     description: ""
   });
+  var [isEdit, setIsEdit] = useState("");
+  var [owners, setOwners] = useState([]);
+  var [owner, setOwner] = useState([]);
+
+  var [profile, setProfile] = useState("");
+  var [img, setImg] = useState("");
+  var [type, setType] = useState("");
+  var [time, setTime] = useState("");
+  var [location, setLocation] = useState("");
+  var [price, setPrice] = useState("");
+  var [summary, setSummary] = useState("");
+  var [description, setDescription] = useState("");
+
+  //get all owners from mongo db
+  useEffect(() => {
+    const getAllOwners = async () => {
+      let ownersData = await fetch("http://localhost:8080/owners")
+      let ownersProfiles = await ownersData.json();
+      //console.log(ownersProfiles);
+     setOwners(ownersProfiles.data.owners);
+    }
+
+    getAllOwners();
+  }, []);
+
+//get all profiles - from ivan's journal app where it loads from fake back end
 
   useEffect(() => {
     getAllProfiles();
@@ -73,7 +103,7 @@ function Pap() {
 
   };
 
-
+  
   return (
     <div className="Pap">
       <AllProfiles
@@ -88,6 +118,7 @@ function Pap() {
         handleSubmit={handleSubmit}
       />
     </div>
+    
   );
 }
 

@@ -4,38 +4,38 @@
       "profile": "Breathe + Bathe Soundbath Series: Venice Beach",
       "img": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F224393929%2F316335414213%2F1%2Foriginal.20220204-222427?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=88e986d1fc5767d89e992dccd8a4a689",
       "id": 1,
-      "Type": "Wellbeing",
-      "Time": "Sunday July 17th, 6:00 pm - 7:15 pm",
-      "Location": "Venice Beach The Electric Lodge, Venice, CA",
-      "Price": "$60",
-      "Summary": "The Breathe + Bathe wellness series is here! Join Avi Sherbill of SoundRx for a 75-minute journey with breathwork, meditation, & soundbath.",
-      "Description": "The Breathe + Bathe series is here! Join Avi Sherbill from SoundRx as he guides you through a 75-minute frequency healing session in-studio while you simply relax and close your eyes. It's like a massage on a cellular level!"
+      "type": "Wellbeing",
+      "time": "Sunday July 17th, 6:00 pm - 7:15 pm",
+      "location": "Venice Beach The Electric Lodge, Venice, CA",
+      "price": "$60",
+      "summary": "The Breathe + Bathe wellness series is here! Join Avi Sherbill of SoundRx for a 75-minute journey with breathwork, meditation, & soundbath.",
+      "description": "The Breathe + Bathe series is here! Join Avi Sherbill from SoundRx as he guides you through a 75-minute frequency healing session in-studio while you simply relax and close your eyes. It's like a massage on a cellular level!"
     },
     {
       "profile": "munDAAANG! L.A.",
       "img": "https://media.timeout.com/images/105907763/380/285/image.jpg",
       "id": 2,
-      "Type": "Art",
-      "Time": "June 1 - August 4, 2022",
-      "Location": "Downtown Arts District, CA",
-      "Price": "free",
-      "Summary": "See Los Angeles through the eyes of LA-based photographers who are drawn to the often-overlooked elements of our urban landscape.",
-      "Description": "Sure, people come to L.A. to see the palm trees, the hills and the ocean. But when you walk these streets on the regular, you become much more attuned to L.A.’s more everyday sights—and that’s especially true for the artists in this photography show. Discover beauty in L.A.’s most mundane, overlooked details at this assembly of works from nine SoCal photographers. You’ll find the show, from munDAAANG! magazine and ArtShareLA, at Angel City Brewery (after an opening reception, you can scope it out during the brewery’s regular operating hours)."
+      "type": "Art",
+      "time": "June 1 - August 4, 2022",
+      "location": "Downtown Arts District, CA",
+      "price": "free",
+      "summary": "See Los Angeles through the eyes of LA-based photographers who are drawn to the often-overlooked elements of our urban landscape.",
+      "description": "Sure, people come to L.A. to see the palm trees, the hills and the ocean. But when you walk these streets on the regular, you become much more attuned to L.A.’s more everyday sights—and that’s especially true for the artists in this photography show. Discover beauty in L.A.’s most mundane, overlooked details at this assembly of works from nine SoCal photographers. You’ll find the show, from munDAAANG! magazine and ArtShareLA, at Angel City Brewery (after an opening reception, you can scope it out during the brewery’s regular operating hours)."
     },
     {
       "profile": "Into the Woods at Descanso Gardens",
       "img": "https://media.timeout.com/images/105720675/380/285/image.jpg",
       "id": 3,
-      "Type": "Theater",
-      "Time": "July 11 - July 17, 2022, 7:30pm",
-      "Location": "Descanso Gardens, La Cañada",
-      "Price": "$30",
-      "Summary": "Descanso is thrilled to present Pacific Opera Project (POP)’s production of Stephen Sondheim’s Into the Woods coming July 8–10 and 15–17. What better place to stage Into the Woods than the actual woods of one of Southern California’s premier outdoor spaces, Descanso Gardens!",
-      "Description": "Once upon a time in a not-so-far-off garden there lay a Sondheim production staged on the edge of the woods. Pacific Opera Project will tackle Stephen Sondheim’s Into the Woods on the main lawn of Descanso Gardens. Tickets are currently sold out, but you can email Pacific Opera Project to be added to the waitlist (come on, this is L.A.—you know at least a few people are going to flake)."
+      "type": "Theater",
+      "time": "July 11 - July 17, 2022, 7:30pm",
+      "location": "Descanso Gardens, La Cañada",
+      "price": "$30",
+      "summary": "Descanso is thrilled to present Pacific Opera Project (POP)’s production of Stephen Sondheim’s Into the Woods coming July 8–10 and 15–17. What better place to stage Into the Woods than the actual woods of one of Southern California’s premier outdoor spaces, Descanso Gardens!",
+      "description": "Once upon a time in a not-so-far-off garden there lay a Sondheim production staged on the edge of the woods. Pacific Opera Project will tackle Stephen Sondheim’s Into the Woods on the main lawn of Descanso Gardens. Tickets are currently sold out, but you can email Pacific Opera Project to be added to the waitlist (come on, this is L.A.—you know at least a few people are going to flake)."
     },
     {
       "profile": "AVALON HOLLYWOOD",
-      "img": "",
+      "img": "https://images.unsplash.com/photo-1516415640404-0ca8b3b68958?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhbG9uJTIwaG9sbHl3b29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
       "type": "Music",
       "time": "Every Night 10pm - 6am",
       "location": "1735 Vine St, Los Angeles 90028, CA",
@@ -46,7 +46,7 @@
     },
     {
       "profile": "Casbah",
-      "img": "",
+      "img": "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FzYmFofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60",
       "type": "Music",
       "time": "Every Night 10pm - 6am",
       "location": "Paris",
@@ -54,6 +54,18 @@
       "summary": "This is it – the big daddy. Set in Hollywood proper directly across the street from the iconic Capitol Records building on Vine, Avalon Hollywood (formerly known as The Palace) offers a big night out experience. A converted theater with an EAW sound system, Avalon hosts Tigerheat on Thursday for the gay/mixed crowd, Control on Friday for alternative electronic dance acts, and their own Avalon night on Saturday for world-famous DJs like Paul Oakenfold and Kevin Saunderson. A little planning goes a long way - for big nights, buying presale tickets is highly recommended.",
       "description": "This is it – the big daddy. Set in Hollywood proper directly across the street from the iconic Capitol Records building on Vine, Avalon Hollywood (formerly known as The Palace) offers a big night out experience. A converted theater with an EAW sound system, Avalon hosts Tigerheat on Thursday for the gay/mixed crowd, Control on Friday for alternative electronic dance acts, and their own Avalon night on Saturday for world-famous DJs like Paul Oakenfold and Kevin Saunderson. A little planning goes a long way - for big nights, buying presale tickets is highly recommended.",
       "id": 5
+    },
+    
+    {
+      "profile": "RooRaa",
+      "img": "https://images.unsplash.com/photo-1471967183320-ee018f6e114a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZXZlbnQlMjBwaXJhdGUlMjBjb2NrdGFpbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
+      "type": "Bar",
+      "time": "Every Night 10pm - 2am",
+      "location": "Paris",
+      "price": "",
+      "summary": "Parites Night",
+      "description": "Cocktails Ahoy!",
+      "id": 9
     }
   ]
 }

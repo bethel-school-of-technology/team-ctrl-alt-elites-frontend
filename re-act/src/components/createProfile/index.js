@@ -5,36 +5,37 @@ const CreateProfile = ({ handleSubmit, handleProfileChange, handleImgChange, han
 
 return (
     <div>
-        <form onSubmit={handleSubmit} className="forms">
-            <label htmlFor="profile" >Profile Name</label>
+        <form onSubmit={handleSubmit}  className="form">
+            <label htmlFor="profile" className="form-label mt-4">Profile Name</label>
             <br />
             <input name="profile" onChange={handleProfileChange}></input>
             <br />
-            <label htmlFor="img" >Profile Image</label>
+            <label htmlFor="img" className="form-label mt-4">Profile Image - input url</label>
             <br />
-            <input name="img" type="file" multiple accept="image/*" onChange={handleImgChange} />
+            <input name="img" /*type="file" multiple accept="image/*"*/ onChange={handleImgChange} />
             <br /> 
-            <label htmlFor="type" >Type</label>
+            <label htmlFor="type" className="form-label mt-4">Type</label>
             <br />
             <input name="type" onChange={handleTypeChange}></input>
             <br /> 
-            <label htmlFor="time" >Time</label>
+            <label htmlFor="time" className="form-label mt-4">Time</label>
             <br />
             <input name="time" onChange={handleTimeChange}></input>
             <br /> 
-            <label htmlFor="location" >Location</label>
+            <label htmlFor="location" className="form-label mt-4">Location</label>
             <br />
             <input name="location" onChange={handleLocationChange}></input>
             <br /> 
-            <label htmlFor="summary">Summary of Event</label>
+            <label htmlFor="summary"className="form-label mt-4">Summary of Event</label>
             <br />
             <textarea
+            
                 rows="5"
                 cols="50"
                 name="summary"
                 onChange={handleSummaryChange}></textarea>
             <br />
-            <label htmlFor="description">Description of Event</label>
+            <label htmlFor="description" className="form-label mt-4">Description of Event</label>
             <br />
             <textarea
                 rows="20"
@@ -42,8 +43,10 @@ return (
                 name="description"
                 onChange={handleDescriptionChange}></textarea>
             <br />
+            <br />
             <button className="btn btn-dark" type="Submit">Create Profile</button>
         </form>
+        <br />
     </div>
 )
 }
