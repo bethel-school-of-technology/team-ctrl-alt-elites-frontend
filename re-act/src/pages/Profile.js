@@ -1,12 +1,14 @@
 import React from 'react';
-import Pap from '../Pap';
+
+
 
 const Profile = () =>
 (
   <div>
-    <React.StrictMode>
-      <Pap />
-    </React.StrictMode>
+   
+   
+      
+   
 
 
     <div style={{ margin: '1em' }} >
