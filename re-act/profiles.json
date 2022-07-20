@@ -55,7 +55,6 @@
       "description": "This is it – the big daddy. Set in Hollywood proper directly across the street from the iconic Capitol Records building on Vine, Avalon Hollywood (formerly known as The Palace) offers a big night out experience. A converted theater with an EAW sound system, Avalon hosts Tigerheat on Thursday for the gay/mixed crowd, Control on Friday for alternative electronic dance acts, and their own Avalon night on Saturday for world-famous DJs like Paul Oakenfold and Kevin Saunderson. A little planning goes a long way - for big nights, buying presale tickets is highly recommended.",
       "id": 5
     },
-    
     {
       "profile": "RooRaa",
       "img": "https://images.unsplash.com/photo-1471967183320-ee018f6e114a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZXZlbnQlMjBwaXJhdGUlMjBjb2NrdGFpbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
@@ -66,6 +65,17 @@
       "summary": "Parites Night",
       "description": "Cocktails Ahoy!",
       "id": 9
+    },
+    {
+      "profile": "The 818 Night Market",
+      "img": "https://images.unsplash.com/photo-1526139334526-f591a54b477c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlnaHQlMjBtYXJrZXR8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
+      "type": "Market",
+      "time": "Every 2nd and 4th Saturday",
+      "location": "Mission Hills Christian Church. 14941 Devonshire ST. Mission Hills Ca, 91345",
+      "price": "0",
+      "summary": "The 818 Night Market Bringing the community a special event filled with Vendors, Art, Music, Games, Collectibles, and much more.",
+      "description": "Featuring: Vendors, Music, Art, Fashion, FOOD, Jewelry, Games, Collectibles and much more!",
+      "id": 10
     }
   ]
 }

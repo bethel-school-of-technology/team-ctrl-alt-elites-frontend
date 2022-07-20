@@ -10,7 +10,7 @@ const AllProfiles = ({ profileData, handleSubmit, handleProfileChange, handleImg
             {profileData.map(profile => (
                 <div key={profile.id}>
                     <h3>{profile.profile}</h3>
-                    <img className="img" src={profile.img}></img>
+                    <img className="img" src={profile.img}> </img>
                     <h6>{profile.type}</h6>
                     <h6>{profile.time}</h6>
                     <h6>{profile.location}</h6>

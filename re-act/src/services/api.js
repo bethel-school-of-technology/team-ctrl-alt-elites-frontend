@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const baseURL = "http://localhost:3000/Profiles";
+const baseURL = "http://localhost:8080/Profiles";
 
 const API = {
 
