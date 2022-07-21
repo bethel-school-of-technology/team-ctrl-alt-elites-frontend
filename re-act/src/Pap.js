@@ -45,6 +45,8 @@ function Pap() {
     getAllOwners();
   }, []);
 
+
+
 //get all profiles - from ivan's journal app where it loads from fake back end
 
   useEffect(() => {
@@ -56,6 +58,8 @@ function Pap() {
       setAllProfiles(res.data)
     });
   };
+
+  //FORM - Create NEW 
   //to stop the form resetting when filling in fields in the form
   const handleProfileChange = (e) => {
     const { value } = e.target;

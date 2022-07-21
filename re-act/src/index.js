@@ -8,6 +8,8 @@ import Search from './pages/Search';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Create from './pages/CreateProfile';
 import All from './pages/AllProfiles';
+import One from './pages/OneProfile';
+import New from './pages/NewProfile';
 
 const App = () => (
   <Router>
@@ -31,10 +33,16 @@ const App = () => (
             <Link to='/profile'>Profile</Link>
           </li>
           <li style={{ marginTop: '1em', marginRight: '2em' }}>
+            <Link to='/create'>Create Profile</Link>
+          </li>
+          <li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/all'>All Profiles</Link>
           </li>
           <li style={{ marginTop: '1em', marginRight: '2em' }}>
-            <Link to='/create'>Create Profile</Link>
+            <Link to='/one'>One Profile</Link>
+          </li>
+          <li style={{ marginTop: '1em', marginRight: '2em' }}>
+            <Link to='/new'>New Profile</Link>
           </li>
           <li style={{ marginRight: '2em' }}>
             <Link to='/search'><button type="button" className="btn btn-primary">Search</button></Link>
@@ -49,8 +57,10 @@ const App = () => (
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/all" element={<All />} />
         <Route path="/create" element={<Create />} />
+        <Route path="/all" element={<All />} />
+        <Route path="/one" element={<One />} />
+        <Route path="/new" element={<New />} />
         <Route path="/search" element={<Search />} />
       </Routes>
     </div>

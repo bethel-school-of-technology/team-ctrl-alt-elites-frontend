@@ -1,16 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
-import './pap.css';
+import context from 'react-bootstrap/esm/AccordionContext';
 
 
-function App() {
+const FomoCreateProfile = () => {
 
-    //will be id
-    var [isEdit, setIsEdit] = useState("");
-    //all owners
-    var [owners, setOwners] = useState([]);
-    //for editing owners
-    var [owner, setOwner] = useState([]);
-  
     var [profile, setProfile] = useState("");
     var [img, setImg] = useState("");
     var [type, setType] = useState("");
@@ -19,17 +12,6 @@ function App() {
     var [price, setPrice] = useState("");
     var [summary, setSummary] = useState("");
     var [description, setDescription] = useState("");
-  
-    //get all owners from mongo db
-    useEffect(() => {
-      const getAllOwners = async () => {
-        let ownersData = await fetch("http://localhost:8080/owners")
-        let ownersProfiles = await ownersData.json();
-        //console.log(ownersProfiles);
-       setOwners(ownersProfiles.data.owners);
-      }
-   getAllOwners();
-  }, []);
 
 //create
     const handleSubmit = async (e) =>{
@@ -46,7 +28,10 @@ function App() {
     console.log(newOwner);
 }
 return (
-    <div className='App'>
+    <div style={{ margin: '1em' }} className='FomoCreateProfile'>
+        <h2>Create New Profile</h2>
+        <h6>Create New Profiles in Real Back-End</h6>
+        <hr />
         <form onSubmit={handleSubmit}  className="form">
             <label className="form-label mt-4">Profile Name</label>
             <br />
@@ -91,24 +76,9 @@ return (
             <br />
             <button className="btn btn-dark" type="Submit">Create Profile</button>
         </form>
-
-        {owners.map((owners, idx) => {
-            return(
-                <div key={idx}>
-                    
-                    <h3>{owners.profile}</h3>
-                    <img className="img" src={owners.img}></img>
-                    <h6>{owners.type}</h6>
-                    <h6>{owners.time}</h6>
-                    <p>{owners.location}</p>
-                    <p>{owners.price}</p>
-                    <p>{owners.summary}</p>
-                    <p>{owners.description}</p>
-                </div>
-            )
-        })}
-    </div>
+        </div>
 )
 }
 
-export default App;
+
+export default FomoCreateProfile;
