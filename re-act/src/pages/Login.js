@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Login = () => (
-    <div>
+    <div style= {{ margin: '1em' }} >
     <h2>Login</h2>
   </div>
 );
