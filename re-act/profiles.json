@@ -76,6 +76,17 @@
       "summary": "The 818 Night Market Bringing the community a special event filled with Vendors, Art, Music, Games, Collectibles, and much more.",
       "description": "Featuring: Vendors, Music, Art, Fashion, FOOD, Jewelry, Games, Collectibles and much more!",
       "id": 10
+    },
+    {
+      "profile": "Bel-Air Bay Club",
+      "img": "https://images.unsplash.com/photo-1612550467658-97cb7b05043a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmVhY2hjbHVifGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
+      "type": "Beach Club",
+      "time": "Every day 10am - 2am",
+      "location": "16801 Pacific Coast Hwy, Pacific Palisades, CA 90272, United States",
+      "price": "",
+      "summary": "The Bel-Air Bay Club is both an event venue and a private beach club located in Pacific Palisades, Los Angeles, California. The Upper Club, includes an ocean view and on-site accommodations available for private parties.",
+      "description": "Bel-Air Bay Club was built during 1927 and 1928 as part of a 31-acre project conceived by Alphonzo Bell, one of the primary developers of Los Angeles.  His previous real estate ventures included the Bel-Air neighborhood and its famous country club. Several years prior, Mr. Bell was also instrumental in the founding of the Hacienda Country Club.  Bell's family were essential contributors to the history and development of Southern California, and Alphonzo Bell was key to the development of real estate in the Los Angeles area. The country clubs he established, including Bel-Air Bay Club, are testaments to his vision of places of beauty and leisure for the growing demographic of the Hollywood elite.\n\nBel-Air Bay Club was incorporated on June 2, 1927. Mr. Bell seemed to have a special talent for developing this type of project, and his promotion of athletics was a knowledgeable one, having ranked as one of the nation's top ten tennis players in 1904.  It is an appropriate legacy to Mr. Bell, who also served as Club President from 1927 through 1945, that the Bel-Air Bay Club is, to this day, known as \"the paddle tennis club,\" having spawned several national champion players.\n\nThe Club was such a center of social activity during the 1920s, 1930s and 1940s that many celebrities frequented Club functions, along with other prominent local citizens. Today, the Club is a popular destination for family and social gatherings as well as paddle tennis, volleyball, beach activities and bridge.\n\nBel-Air Bay Club consists of two facilities separated by Pacific Coast Highway. The grounds are located on one-quarter mile of beachfront, with a total of 14-acres including picturesque bluffs overlooking the sea. Mr. Bell situated the Upper Clubhouse in such a way that it offers an unsurpassed view of Santa Monica Bay and Catalina Island, with Pacific Coast Highway completely hidden from view by the landscape. Many visitors have commented that the Bel-Air Bay Club provides one of the finest views in the world. An extensive renovation of the Lower Club was completed in 2007.",
+      "id": 11
     }
   ]
 }
