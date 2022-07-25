@@ -14,7 +14,7 @@ useEffect(() => {
   const getAllOwners = async () => {
     let ownersData = await fetch("http://localhost:8080/owners")
     let ownersProfiles = await ownersData.json();
-    //console.log(ownersProfiles);
+    console.log(ownersProfiles);
    setOwners(ownersProfiles.data.owners);
   }
 getAllOwners();

@@ -24,14 +24,7 @@ function Pap() {
   var [owners, setOwners] = useState([]);
   var [owner, setOwner] = useState([]);
 
-  var [profile, setProfile] = useState("");
-  var [img, setImg] = useState("");
-  var [type, setType] = useState("");
-  var [time, setTime] = useState("");
-  var [location, setLocation] = useState("");
-  var [price, setPrice] = useState("");
-  var [summary, setSummary] = useState("");
-  var [description, setDescription] = useState("");
+  
 
   //get all owners from mongo db
   useEffect(() => {
