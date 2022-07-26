@@ -1,11 +1,11 @@
 import axios from 'axios';
-import React, { useState, withRouter } from 'react';
-
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
 
   const signIn = (e) => {
@@ -16,7 +16,6 @@ const Login = () => {
       const req = {
         
           username: username,
-          email: email,
           password: password
       
       };
@@ -24,8 +23,11 @@ const Login = () => {
       axios.post('http://localhost:8080/api/auth/signin', req).then(result => {
         const token = result.data.token;
         localStorage.setItem('myJWT', token);
-       // history.push('/One')
+        //history.push('/One')
+        navigate( '/One');
         console.log(result.data);
+
+        
       })
 
     }
@@ -40,8 +42,7 @@ const Login = () => {
       <input type="text" name="username" onChange={ e => setUsername(e.target.value) } />
       <label>Password</label>
       <input type="text" name="password" onChange={ e => setPassword(e.target.value) } />
-      <label>Email</label>
-      <input type="text" name="email" onChange={ e => setEmail(e.target.value) } />
+      
       <button>Sign In</button>
     </form>
   </div>);
