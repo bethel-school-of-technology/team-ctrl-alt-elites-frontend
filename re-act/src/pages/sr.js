@@ -22,13 +22,13 @@ const Sr = () => {
 
 
    
-    return (<div>
+    return (<div classNamw="container" style={{ margin: '1em' }}>
     <h1>Search Results</h1>
-    <ul>
+    <ul className="row w-100" >
          { owners.map(owner =>
-            <li key={owner._id}>
-                {owner.profile}
-
+            <li style={{ padding: '0.5em'}} className=" d-flex justify-content-center col-12 col-md-6 col-lg-4 col-xl-2 " key={owner._id}>
+                
+                <img className="img-thumbnail" src={owner.img}></img>
             </li>  ) }
     </ul>
  </div>);
