@@ -5,11 +5,12 @@ import About from './pages/About';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Search from './pages/Search';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Create from './pages/CreateProfile';
 import All from './pages/AllProfiles';
 import One from './pages/OneProfile';
 import New from './pages/NewProfile';
+import Sr from './pages/sr'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 const App = () => (
   <Router>
@@ -44,6 +45,9 @@ const App = () => (
           <li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/new'>New Profile</Link>
           </li>
+          <li style={{ marginTop: '1em', marginRight: '2em' }}>
+            <Link to='/sr'>Search Result</Link>
+          </li>
           <li style={{ marginRight: '2em' }}>
             <Link to='/search'><button type="button" className="btn btn-primary">Search</button></Link>
           </li>
@@ -61,6 +65,7 @@ const App = () => (
         <Route path="/all" element={<All />} />
         <Route path="/one" element={<One />} />
         <Route path="/new" element={<New />} />
+        <Route path="/sr" element={<Sr />} />
         <Route path="/search" element={<Search />} />
       </Routes>
     </div>
