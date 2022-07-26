@@ -1,14 +1,15 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import SignUp from '../components/SignUp/SignUp';
-const Login = () => {
+
+const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
 
-  const signIn = (e) => {
+  const signUp = (e) => {
     e.preventDefault();
       
     if (username !== '' && password !== '' ) {
@@ -16,11 +17,22 @@ const Login = () => {
       const req = {
         
           username: username,
-          password: password
-      
+          password: password,
+          email: email,
       };
+      const token = localStorage.getItem('myJWT');
 
-      axios.post('http://localhost:8080/api/auth/signin', req).then(result => {
+     if (!token) {
+        navigate( '/login');
+      }
+
+      const options = {
+            headers: {
+                'Authorisation': `Bearer ${token}`
+            }
+      }
+
+      axios.post('http://localhost:8080/update/:id', req, options).then(result => {
         const token = result.data.token;
         localStorage.setItem('myJWT', token);
         //history.push('/One')
@@ -36,18 +48,19 @@ const Login = () => {
 
   return (
     <div style= {{ margin: '1em' }} >
-    <h2>Login</h2>
-    <form onSubmit={ signIn }>
+    <h2>SignUp</h2>
+    <form onSubmit={ signUp }>
       <label>Username</label>
       <input type="text" name="username" onChange={ e => setUsername(e.target.value) } />
       <label>Password</label>
       <input type="text" name="password" onChange={ e => setPassword(e.target.value) } />
+      <label>Email</label>
+      <input type="text" name="email" onChange={ e => setEmail(e.target.value) } />
       
       <button>Sign In</button>
     </form>
-    <SignUp />
   </div>);
-  
+ 
 };
 
-export default Login;
+export default SignUp;
