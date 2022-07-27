@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+/*import React, { useEffect, useState } from 'react';
 import IProfiles from '../components/AllProfiles/iProfiles';
 import API from '../services/api';
 
@@ -41,5 +41,5 @@ return (
 }
 
 export default Profile;
-
+*/
    

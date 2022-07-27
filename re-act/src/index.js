@@ -11,6 +11,7 @@ import One from './pages/OneProfile';
 import New from './pages/NewProfile';
 import Sr from './pages/sr'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import EditProfile from './components/EditProfile';
 
 const App = () => (
   <Router>
@@ -67,9 +68,11 @@ const App = () => (
         <Route path="/new" element={<New />} />
         <Route path="/sr" element={<Sr />} />
         <Route path="/search" element={<Search />} />
-        <Route path="/:id" element={<One />}>
-          {/* < One /> */}
-        </Route>
+        <Route path="/:id" element={<One />} /> 
+        {/* < One />  </Route> */}
+        <Route path="/:id/edit" element={<EditProfile />} />
+          
+        
       </Routes>
     </div>
 
