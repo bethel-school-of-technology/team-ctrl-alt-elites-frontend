@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import Pap from '../Pap';
 
 
@@ -16,4 +16,4 @@ const Create = () => (
   </div>
 );
 
-export default Create;
+export default Create;*/
