@@ -37,12 +37,12 @@ const App = () => (
           <li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/create'>Create Profile</Link>
           </li>*/}
-          <li style={{ marginTop: '1em', marginRight: '2em' }}>
+          {/*<li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/all'>All Profiles</Link>
-          </li>
-          <li style={{ marginTop: '1em', marginRight: '2em' }}>
+        </li>*/}
+          {/*<li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/one'>One Profile</Link>
-          </li>
+        </li>*/}
           <li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/new'>New Profile</Link>
           </li>

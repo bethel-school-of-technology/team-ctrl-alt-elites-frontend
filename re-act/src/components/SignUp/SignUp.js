@@ -19,22 +19,33 @@ const SignUp = () => {
           username: username,
           password: password,
           email: email,
-          
-      
-      };
+          //token: token
+        };
+        const token = localStorage.getItem('myJWT');
 
-      axios.post('http://localhost:8080/api/auth/signup', req).then(result => {
-        const token = result.data.token;
+        if (!token) {
+            navigate('/login');
+        }
+
+        const options = {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        }
+      
+      
+//added const token and const options as well as commenting out const token = result.data.token; below
+      axios.post('http://localhost:8080/api/auth/signup', req, options).then(result => {
+        //const token = result.data.token;
         localStorage.setItem('myJWT', token);
         //history.push('/One')
-        navigate( '/One');
-        console.log(result.data);
-
-        
-      })
-
+        navigate( '/one');
+        console.log(result.data); 
+      }, err => {
+        localStorage.removeItem('myJWT');
+        navigate('/login');
+      });
     }
-
   };
 
   return (

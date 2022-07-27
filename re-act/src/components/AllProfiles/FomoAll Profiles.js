@@ -10,7 +10,7 @@ const FomoAllProfiles = ({ owners }) => {
                 
                   <div key={owners.id}>
                     <h3 key={owners.profile}>{owners.profile}</h3>
-                    <img key={owners.img}className="img" src={owners.img}></img>
+                    <img style={{maxWidth: "40%"}} key={owners.img}className="img" src={owners.img}></img>
                     <h6 key={owners.type}>{owners.type}</h6>
                     <h6 key={owners.time}>{owners.time}</h6>
                     <p key={owners.location}>{owners.location}</p>
