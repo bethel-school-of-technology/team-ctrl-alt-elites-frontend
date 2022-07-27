@@ -1,4 +1,4 @@
-import axios from 'axios';
+/*import axios from 'axios';
 
 
 const baseURL = "http://localhost:3000/Profiles";
@@ -16,4 +16,4 @@ const API = {
 
 
 
-export default API;
+export default API;*/

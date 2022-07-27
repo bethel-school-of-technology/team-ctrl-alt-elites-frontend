@@ -1,21 +1,55 @@
-import React, { useEffect, useState, useContext } from 'react';
-import App from '../app';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import {  Link, useParams } from 'react-router-dom';
 
+const One = () => {
 
+  const [owners, setOwners] = useState({});
+  let { id } = useParams();
+  
+  useEffect(() => {
 
-const One = () => (
-  <div style={{ margin: '1em' }}>
-<h2>Get One Profile By ID</h2>
-<h6>TBC - get searchbyid route exists in the back end</h6>
-<hr />
-<button type="button" className="btn btn-primary" style={{ width: '100%'}}>Search</button>
- 
-<React.StrictMode>
-    <App />
-  </React.StrictMode>
- 
-   
- </div>
+    //62d7cb0911df47658e80d4c6
+    //set to users instead
+    //cant find a get user by id route 
+    const url = `http://localhost:8080/owners/${id}`;
+    
+    axios.get(url).then(result => {
+      console.log(result)
+      setOwners(result.data.data.owner);
+    }, err => { 
+      console.log('error', err);
+    });
+}, []);
+
+return (
+<div style={{ margin: '1em' }}>
+  <div>
+  <h2>{owners.profile}</h2>
+  <br />
+  <h6>{owners.summary}</h6>
+  <hr />
+  <div >
+    <div >
+      <img className="img" style={{ width: "100%" }} src={owners.img}></img>
+  </div>
+  <div>
+      <h6>Type: {owners.type}</h6>
+      <h6>Time: {owners.time}</h6>
+      <h6>Location: {owners.location}</h6>
+      <p>Price: ${owners.price}</p>
+  <br />
+      <p>{owners.description}</p>
+  </div>
+  </div>
+  </div>
+  <br />
+  <div  className="d-flex align-items-end justify-content-center" style={{height: "200px"}} >
+    <h1 className="mt-auto" ><Link to="/">FOMO</Link></h1>
+  </div>
+</div>
+
 );
+};
 
 export default One;

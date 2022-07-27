@@ -1,12 +1,14 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import SignUp from '../components/SignUp/SignUp';
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  //assign to id the id that was created for the user linked to an event..;
+  let { id } = useParams
 
   const signIn = (e) => {
     e.preventDefault();
@@ -24,7 +26,7 @@ const Login = () => {
         const token = result.data.token;
         localStorage.setItem('myJWT', token);
         //history.push('/One')
-        navigate( '/One');
+        navigate( '/One/' + id);
         console.log(result.data);
 
         

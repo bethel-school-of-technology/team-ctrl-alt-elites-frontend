@@ -17,7 +17,7 @@ const App = () => (
     <div >
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'end' }}>
 
-        <h1 style={{ marginRight: 'auto', marginTop: '0.2em', marginLeft: '0.3em' }} >FOMO</h1>
+        <h1 style={{ marginRight: 'auto', marginTop: '0.2em', marginLeft: '0.3em' }} ><Link to="/">FOMO</Link></h1>
 
 
         <ul className="navlist" style={{ display: 'flex', flexDirection: 'row', marginLeft: '2em', }} >
@@ -67,6 +67,9 @@ const App = () => (
         <Route path="/new" element={<New />} />
         <Route path="/sr" element={<Sr />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/:id" element={<One />}>
+          {/* < One /> */}
+        </Route>
       </Routes>
     </div>
 
