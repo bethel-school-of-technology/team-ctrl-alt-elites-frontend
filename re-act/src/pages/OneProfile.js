@@ -43,9 +43,19 @@ return (
   </div>
   </div>
   </div>
+ 
   <br />
-  <div  className="d-flex align-items-end justify-content-center" style={{height: "200px"}} >
+  
+    <Link role="button" to={ `/${owners._id}/edit` } className="btn btn-primary d-flex justify-content-center " style={{ width: '100%'}}>Edit</Link>
+    
+  <div className= "d-flex align-items-end ">
+    
+    </div>
+    <br />
+  <div  className="d-flex  justify-content-center"  >
+    <div>
     <h1 className="mt-auto" ><Link to="/">FOMO</Link></h1>
+    </div>
   </div>
 </div>
 

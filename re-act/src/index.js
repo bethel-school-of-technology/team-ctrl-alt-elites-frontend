@@ -43,11 +43,11 @@ const App = () => (
           {/*<li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/one'>One Profile</Link>
         </li>*/}
-          <li style={{ marginTop: '1em', marginRight: '2em' }}>
+          {/*<li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/new'>New Profile</Link>
-          </li>
+      </li>*/}
           <li style={{ marginTop: '1em', marginRight: '2em' }}>
-            <Link to='/sr'>Search Result</Link>
+            <Link to='/sr'>Results</Link>
           </li>
           <li style={{ marginRight: '2em' }}>
             <Link to='/search'><button type="button" className="btn btn-primary">Search</button></Link>
