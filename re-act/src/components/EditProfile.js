@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import {  Link, useParams } from 'react-router-dom';
-
+import { useNavigate, } from 'react-router-dom';
 const EditProfile = () => {
-
+  const navigate = useNavigate();
   const [owners, setOwners] = useState({
     profile: "",
     img: "",
@@ -18,8 +18,43 @@ const EditProfile = () => {
   
   const updateProfile = (e) => {
     e.preventDefault();
-    console.log(owners);
-  }
+   
+    //need to change to login privilidges when connected to users protected routes
+    //if (owners.profile !== '' && owners.id !== '' ) {
+      //make the call to axios
+      const req = {
+        ...owners
+        };
+
+      //not token as of yet from owners
+       // const token = localStorage.getItem('myJWT');
+
+      //  if (!token) {
+       //     navigate('/login');
+     //   }
+
+     //   const options = {
+      //      headers: {
+      //          'Authorization': `Bearer ${token}`
+    //        }
+    //    }
+      
+      const url = `http://localhost:8080/owners/update/${id}`
+//added const token and const options as well as commenting out const token = result.data.token; below
+      axios.put(url, req, /*options*/).then(result => {
+        //const token = result.data.token;
+       // localStorage.setItem('myJWT', token);
+        //history.push('/One')
+        //navigate( '/one');
+        console.log(result.data); 
+      }, /*err => {
+        localStorage.removeItem('myJWT');
+        navigate('/login');
+      }*/);
+    //}
+  };
+
+  
 
   useEffect(() => {
 
@@ -103,7 +138,7 @@ return (
   </div>
 </div>
 
-);
+                );
 };
 
 export default EditProfile;
