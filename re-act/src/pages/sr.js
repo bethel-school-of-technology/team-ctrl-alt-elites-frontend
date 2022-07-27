@@ -29,15 +29,11 @@ const Sr = () => {
     <ul  className="row w-100" >
          { owners.map(owner =>
             <li style={{ padding: '0.5em'}} className=" d-flex justify-content-center col-12 col-md-6 col-lg-4 col-xl-2 " key={owner._id}>
-                <div>
-                <img key={owner.img} className="img-thumbnail" src={owner.img}>
-                 
-                </img>
-                <Link to={ `/${owner._id}` }>{owner.profile}</Link>
-                </div>
+                <a href={ `/${owner._id}` }>
+                <img key={owner.img} className="img-thumbnail rounded mx-auto d-block " src={owner.img}></img>
+                </a>
             </li>
-            
-            ) }
+            )}
     </ul>
  </div>);
 

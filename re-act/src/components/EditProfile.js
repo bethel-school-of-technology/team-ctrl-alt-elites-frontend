@@ -47,9 +47,11 @@ const EditProfile = () => {
         //history.push('/One')
         //navigate( '/one');
         console.log(result.data); 
-      }, /*err => {
+        navigate(`/${id}`);
+      }, 
+      /*err => {
         localStorage.removeItem('myJWT');
-        navigate('/login');
+        
       }*/);
     //}
   };
