@@ -8,6 +8,11 @@
     margin-bottom: 1em;
     margin-right: 1em;
 }
+.jumbotron {
+  background-image: url(https://images.unsplash.com/photo-1519671282429-b44660ead0a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZnVuJTIwZXZlbnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60);
+  
+  align-items: baseline;
+}
  /*Source mixins*/
 
  /* media query necessary for xs breakpoint as it's effectively `
