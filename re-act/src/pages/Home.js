@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React  from 'react';
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const Home = () => 
@@ -19,8 +19,15 @@ const Home = () =>
             
         </div>
    </div>
-   <button type="button" className="btn btn-primary" style={{ width: '100%'}}>Search</button>
+   <button type="button" className="btn btn-primary" style={{ width: '100%', marginTop: "100px"}}>Search</button>
+
+   <div  className="d-flex  fixed-bottom justify-content-center row"  >
+  <div>
+  <h1 className="mt-auto " ><Link to="/">FOMO</Link></h1>
+  </div>
+</div>
  </div>
+ 
 );
 
 

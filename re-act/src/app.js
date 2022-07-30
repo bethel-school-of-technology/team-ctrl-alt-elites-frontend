@@ -3,7 +3,9 @@ import './pap.css';
 
 
 function App() {
-
+    useEffect(() => {
+        document.title = "FOMO"
+    }, [])
     //will be id
     var [isEdit, setIsEdit] = useState("");
     //all owners
