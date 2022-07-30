@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -74,7 +75,8 @@ return (
                 onChange={e => setDescription(e.target.value)}/>
             <br />
             <br />
-            <button className="btn btn-dark" type="Submit">Create Profile</button>
+            <button className="btn btn-dark" type="Submit"> <Link to='/'>Create Profile</Link> </button>
+            
         </form>
         </div>
 )

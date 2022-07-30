@@ -12,13 +12,13 @@ import New from './pages/NewProfile';
 import Sr from './pages/sr'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import EditProfile from './components/EditProfile';
-
+import PrivateRoute from './components/PrivateRoute';
 const App = () => (
   <Router>
     <div >
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'end' }}>
 
-        <h1 style={{ marginRight: 'auto', marginTop: '0.2em', marginLeft: '0.3em' }} ><Link to="/">FOMO</Link></h1>
+        <h1 style={{ marginRight: 'auto', marginTop: '0.2em', marginLeft: '0.3em' }} ><img style={{width: "50px", marginTop: "-6px"}} src="favicon.ico"></img><Link to="/">FOMO</Link></h1>
 
 
         <ul className="navlist" style={{ display: 'flex', flexDirection: 'row', marginLeft: '2em', }} >

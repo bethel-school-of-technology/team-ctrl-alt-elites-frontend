@@ -2,6 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useNavigate, } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
+
+//inset props in props at = (here) =>
 const EditProfile = () => {
   const navigate = useNavigate();
   const [owners, setOwners] = useState({
@@ -26,6 +29,8 @@ const EditProfile = () => {
       ...owners
     };
 
+//replace below lines when props past in with token (lines const toke and if !token and const option)
+
     //not token as of yet from owners
     // const token = localStorage.getItem('myJWT');
 
@@ -38,6 +43,13 @@ const EditProfile = () => {
     //          'Authorization': `Bearer ${token}`
     //        }
     //    }
+//replace all above to relpace below with:
+    //const options ={
+      //headers: {
+        //'Authorization': `Bearer ${props.token}`
+      //}
+   // }
+
 
     const url = `http://localhost:8080/owners/update/${id}`
     //added const token and const options as well as commenting out const token = result.data.token; below
@@ -47,11 +59,11 @@ const EditProfile = () => {
       //history.push('/One')
       //navigate( '/one');
       console.log(result.data);
-      navigate(`/${id}`);
+      /*props.*/navigate(`/${id}`);
     },
       /*err => {
         localStorage.removeItem('myJWT');
-        
+        //props.navigate('/login);
       }*/);
     //}
   };
@@ -73,10 +85,15 @@ const EditProfile = () => {
     });
   }, [id]);
 
+
+//repeat props adons for delete
+
+
   const deleteOwner = () => {
     console.log('Bye!');
      //not token as of yet from owners
     // const token = localStorage.getItem('myJWT');
+
 
     //  if (!token) {
     //     navigate('/login');

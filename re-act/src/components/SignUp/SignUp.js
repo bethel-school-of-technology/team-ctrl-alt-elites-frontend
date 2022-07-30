@@ -38,7 +38,7 @@ const SignUp = () => {
       axios.post('http://localhost:8080/api/auth/signup', req, options).then(result => {
         //const token = result.data.token;
         localStorage.setItem('myJWT', token);
-        //history.push('/One')
+        
         navigate( '/one');
         console.log(result.data); 
       }, err => {
@@ -49,17 +49,18 @@ const SignUp = () => {
   };
 
   return (
-    <div style= {{ margin: '1em' }} >
+    <div  >
     <h2>SignUp</h2>
     <form onSubmit={ signUp }>
-      <label>Username</label>
-      <input type="text" name="username" onChange={ e => setUsername(e.target.value) } />
-      <label>Password</label>
-      <input type="text" name="password" onChange={ e => setPassword(e.target.value) } />
-      <label>Email</label>
-      <input type="text" name="email" onChange={ e => setEmail(e.target.value) } />
+        <div className="form-group">
       
-      <button>Sign In</button>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" onChange={ e => setUsername(e.target.value) } />
+      
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" onChange={ e => setPassword(e.target.value) } />
+      
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" onChange={ e => setEmail(e.target.value) } />
+      <button type="button" class="btn btn-dark">Sign Up</button>
+      </div>
     </form>
   </div>);
  
