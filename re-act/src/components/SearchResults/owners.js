@@ -2,15 +2,15 @@ import React, { useEffect, useState} from "react";
 import axios from "axios";
 
 
-const Owners = () => {
+const User = () => {
 
-    const [owners, setOwners] = useState();
+    const [users, setUsers] = useState();
     useEffect(() => {
-        axios.get('http://localhost:8080/owners').then(result => {
+        axios.get('http://localhost:8080/users').then(result => {
         
         
-        setOwners(result.data);
-        console.log(result.data.data.owners);
+        setUsers(result.data);
+        console.log(result.data.data.users);
         
         });
     }, []);
@@ -20,9 +20,9 @@ const Owners = () => {
     return (<div>
     <h1>Search Results</h1>
     <ul>
-         { owners.map(owner => 
-            <li key={owner.id}>
-                {owner.profile}
+         { users.map(users => 
+            <li key={users.id}>
+                {users.profile}
 
             </li> ) }
     </ul>
@@ -31,4 +31,4 @@ const Owners = () => {
 
 }
 
-export default Owners;
+export default User;

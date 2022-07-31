@@ -7,17 +7,17 @@ import FomoAllProfiles from '../components/AllProfiles/FomoAll Profiles';
 
 function All() {
 
- //all owners
- const [owners, setOwners] = useState([]);
+ //all Users
+ const [users, setUsers] = useState([]);
 
 useEffect(() => {
-  const getAllOwners = async () => {
-    let ownersData = await fetch("http://localhost:8080/owners")
-    let ownersProfiles = await ownersData.json();
-    console.log(ownersProfiles);
-   setOwners(ownersProfiles.data.owners);
+  const getAllUsers = async () => {
+    let usersData = await fetch("http://localhost:8080/users")
+    let usersProfiles = await usersData.json();
+    console.log(usersProfiles);
+   setUsers(usersProfiles.data.users);
   }
-getAllOwners();
+getAllUsers();
 }, []);
 
 return (
@@ -28,7 +28,7 @@ return (
       <h1>FOMO Profiles</h1>
       <h6>Shows all profiles from true back end</h6>
       <hr />
-    <FomoAllProfiles owners={owners} />
+    <FomoAllProfiles users={users} />
     <hr />
   </div>
   </div>

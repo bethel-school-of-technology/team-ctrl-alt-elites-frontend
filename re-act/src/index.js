@@ -13,6 +13,7 @@ import Sr from './pages/sr'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import EditProfile from './components/EditProfile';
 import PrivateRoute from './components/PrivateRoute';
+
 const App = () => (
   <Router>
     <div >
@@ -25,12 +26,12 @@ const App = () => (
           <li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to="/">Home</Link>
           </li>
-          <li style={{ marginTop: '1em', marginRight: '2em' }}>
+          {/*<li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/about'>About</Link>
-          </li>
+          </li>*/}
           <li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/login'>Login</Link>
-          </li>
+        </li>
           {/*<li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/profile'>Profile</Link>
           </li>
@@ -39,13 +40,11 @@ const App = () => (
           </li>*/}
           {/*<li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/all'>All Profiles</Link>
-        </li>*/}
+          </li>*/}
           {/*<li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/one'>One Profile</Link>
-        </li>*/}
-          {/*<li style={{ marginTop: '1em', marginRight: '2em' }}>
-            <Link to='/new'>New Profile</Link>
-      </li>*/}
+          </li>*/}
+          
           <li style={{ marginTop: '1em', marginRight: '2em' }}>
             <Link to='/sr'>Results</Link>
           </li>
@@ -59,10 +58,10 @@ const App = () => (
       <hr />
       <Routes>
         <Route exact path='/' element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/*<Route path="/about" element={<About />} />*/}
         <Route path="/login" element={<Login />} />
-        {/*<Route path="/profile" element={<Profile />} />
-        <Route path="/create" element={<Create />} />*/}
+        {/*<Route path="/profile" element={<Profile />} />*/}
+        
         <Route path="/all" element={<All />} />
         <Route path="/one" element={<One />} />
         <Route path="/new" element={<New />} />

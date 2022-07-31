@@ -11,10 +11,10 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
     const isLoggedIn = !! token;
 
 
-   /* if (!token) {
+    if (!token) {
         //redirect
         Navigate('/login');
-    } */
+    } 
 
     return (
         <Route
