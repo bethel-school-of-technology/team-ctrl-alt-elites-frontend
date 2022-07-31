@@ -4,7 +4,7 @@ import {  Link, useParams } from 'react-router-dom';
 
 const One = () => {
 
-  const [owners, setOwners] = useState({});
+  const [users, setUsers] = useState({});
   let { id } = useParams();
   
   useEffect(() => {
@@ -12,11 +12,11 @@ const One = () => {
     //62d7cb0911df47658e80d4c6
     //set to users instead
     //cant find a get user by id route 
-    const url = `http://localhost:8080/owners/${id}`;
+    const url = `http://localhost:8080/users/${id}`;
     
     axios.get(url).then(result => {
       console.log(result)
-      setOwners(result.data.data.owner);
+      setUsers(result.data.data.user);
     }, err => { 
       console.log('error', err);
     });
@@ -25,28 +25,28 @@ const One = () => {
 return (
 <div style={{ margin: '1em' }}>
   <div>
-  <h2>{owners.profile}</h2>
+  <h2>{users.profile}</h2>
   <br />
-  <h6>{owners.summary}</h6>
+  <h6>{users.summary}</h6>
   <hr />
   <div >
     <div >
-      <img className="img" style={{ width: "100%" }} src={owners.img}></img>
+      <img className="imgone" style={{ width: "80%"  }} src={users.image}></img>
   </div>
   <div>
-      <h6>Type: {owners.type}</h6>
-      <h6>Time: {owners.time}</h6>
-      <h6>Location: {owners.location}</h6>
-      <p>Price: ${owners.price}</p>
+      <h6>Type: {users.type}</h6>
+      <h6>Time: {users.time}</h6>
+      <h6>Location: {users.location}</h6>
+      <p>Price: ${users.price}</p>
   <br />
-      <p>{owners.description}</p>
+      <p>{users.description}</p>
   </div>
   </div>
   </div>
  
   <br />
   
-    <Link role="button" to={ `/${owners._id}/edit` } className="btn btn-primary d-flex justify-content-center " style={{ width: '100%'}}>Edit</Link>
+    <Link role="button" to={ `/${users._id}/edit` } className="btn btn-primary d-flex justify-content-center " style={{ width: '100%'}}>Edit</Link>
     
   <div className= "d-flex align-items-end ">
     

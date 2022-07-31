@@ -1,12 +1,15 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+
 
 
 
 const FomoCreateProfile = () => {
-
+    var [username, setUsername] = useState("");
+    var [password, setPassword] = useState("");
+    var [email, setEmail] = useState("");
     var [profile, setProfile] = useState("");
-    var [img, setImg] = useState("");
+    var [image, setImage] = useState("");
     var [type, setType] = useState("");
     var [time, setTime] = useState("");
     var [location, setLocation] = useState("");
@@ -17,30 +20,46 @@ const FomoCreateProfile = () => {
 //create
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        let newOwnerData = await fetch("http://localhost:8080/owners/add", {
+
+        
+        let newUsersData = await fetch("http://localhost:8080/api/auth/signup", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({profile, img, type, time, location, price, summary, description})
+            body: JSON.stringify({username, password, email, profile, image, type, time, location, price, summary, description})
         })
-        let newOwner = await newOwnerData.json();
 
-    console.log(newOwner);
+        let newUsers = await newUsersData.json();
+        
+        
+    console.log(newUsers);
 }
 return (
     <div style={{ margin: '1em' }} className='FomoCreateProfile'>
         <h2>Create New Profile</h2>
-        <h6>Create New Profiles in Real Back-End</h6>
+        <h6>create a new profile to showcase your venue and events</h6>
         <hr />
         <form onSubmit={handleSubmit}  className="form">
+            <label className="form-label mt-4">Username</label>
+            <br />
+            <input name="username" onChange={e => setUsername(e.target.value)} />
+            <br />
+            <label className="form-label mt-4">Password</label>
+            <br />
+            <input name="password" onChange={e => setPassword(e.target.value)} />
+            <br />
+            <label className="form-label mt-4">Email</label>
+            <br />
+            <input name="email" onChange={e => setEmail(e.target.value)} />
+            <br />
             <label className="form-label mt-4">Profile Name</label>
             <br />
             <input name="profile" onChange={e => setProfile(e.target.value)} />
             <br />
             <label className="form-label mt-4">Profile Image - input url</label>
             <br />
-            <input name="img" /*type="file" multiple accept="image/*"*/ onChange={e => setImg(e.target.value)} />
+            <input name="image" /*type="file" multiple accept="image/*"*/ onChange={e => setImage(e.target.value)} />
             <br /> 
             <label className="form-label mt-4">Type</label>
             <br />
@@ -75,7 +94,7 @@ return (
                 onChange={e => setDescription(e.target.value)}/>
             <br />
             <br />
-            <button className="btn btn-dark" type="Submit"> <Link to='/'>Create Profile</Link> </button>
+            <button className="btn btn-dark" type="Submit"> <Link to='/sr'>Create Profile</Link> </button>
             
         </form>
         </div>

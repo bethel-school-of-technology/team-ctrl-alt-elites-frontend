@@ -21,21 +21,21 @@ function Pap() {
     description: ""
   });
   var [isEdit, setIsEdit] = useState("");
-  var [owners, setOwners] = useState([]);
-  var [owner, setOwner] = useState([]);
+  var [users, setUsers] = useState([]);
+  var [user, setUser] = useState([]);
 
   
 
   //get all owners from mongo db
   useEffect(() => {
-    const getAllOwners = async () => {
-      let ownersData = await fetch("http://localhost:8080/owners")
-      let ownersProfiles = await ownersData.json();
+    const getAllUsers = async () => {
+      let usersData = await fetch("http://localhost:8080/users")
+      let usersProfiles = await usersData.json();
       //console.log(ownersProfiles);
-     setOwners(ownersProfiles.data.owners);
+     setUsers(usersProfiles.data.users);
     }
 
-    getAllOwners();
+    getAllUsers();
   }, []);
 
 

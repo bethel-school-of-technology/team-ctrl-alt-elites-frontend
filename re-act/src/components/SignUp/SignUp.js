@@ -1,18 +1,19 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
 
   const signUp = (e) => {
     e.preventDefault();
-      
-    if (username !== '' && password !== '' ) {
+    console.log("sign up!")
+   
+   /* if (username !== '' && password !== '' ) {
       //make the call to axios
       const req = {
         
@@ -45,22 +46,22 @@ const SignUp = () => {
         localStorage.removeItem('myJWT');
         navigate('/login');
       });
-    }
+    }*/
   };
 
   return (
     <div  >
     <h2>SignUp</h2>
-    <form onSubmit={ signUp }>
-        <div className="form-group">
+    <form onSubmit={ signUp } autoComplete="off">
+        
       
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" onChange={ e => setUsername(e.target.value) } />
+      <input autoComplete="off" type="text" placeholder="Username" onChange={ e => setUsername(e.target.value) } />
       
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" onChange={ e => setPassword(e.target.value) } />
+      <input autoComplete="off" type="text" placeholder="Password" onChange={ e => setPassword(e.target.value) } />
       
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" onChange={ e => setEmail(e.target.value) } />
-      <button type="button" class="btn btn-dark">Sign Up</button>
-      </div>
+      <input autoComplete="off" type="text" placeholder="Email" onChange={ e => setEmail(e.target.value) } />
+      <button type="button" >Sign Up</button>
+      
     </form>
   </div>);
  

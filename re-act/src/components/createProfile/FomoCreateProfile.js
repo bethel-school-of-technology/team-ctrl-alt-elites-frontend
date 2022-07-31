@@ -15,19 +15,19 @@ const FomoCreateProfile = () => {
 //create
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        let newOwnerData = await fetch("http://localhost:8080/owners/add", {
+        let newUserData = await fetch("http://localhost:8080/users/add", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({profile, img, type, time, location, price, summary, description})
         })
-        let newOwner = await newOwnerData.json();
+        let newUser = await newUserData.json();
 
-    console.log(newOwner);
+    console.log(newUser);
 }
 return (
-    <div className='FomoCreateProfile'>
+   <div className='FomoCreateProfile'>
         <form onSubmit={handleSubmit}  className="form">
             <label className="form-label mt-4">Profile Name</label>
             <br />
@@ -46,7 +46,7 @@ return (
             <input name="time" onChange={e => setTime(e.target.value)}/>
             <br /> 
             <label  className="form-label mt-4">Location</label>
-            <br />
+            <br /> 
             <input name="location" onChange={e => setLocation(e.target.value)}/>
             <br /> 
             <label className="form-label mt-4">Price</label>

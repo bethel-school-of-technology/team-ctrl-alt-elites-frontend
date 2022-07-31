@@ -9,9 +9,9 @@ function App() {
     //will be id
     var [isEdit, setIsEdit] = useState("");
     //all owners
-    var [owners, setOwners] = useState([]);
+    var [users, setUsers] = useState([]);
     //for editing owners
-    var [owner, setOwner] = useState([]);
+    var [users, setUsers] = useState([]);
   
     var [profile, setProfile] = useState("");
     var [img, setImg] = useState("");
@@ -24,28 +24,28 @@ function App() {
   
     //get all owners from mongo db
     useEffect(() => {
-      const getAllOwners = async () => {
-        let ownersData = await fetch("http://localhost:8080/owners")
-        let ownersProfiles = await ownersData.json();
+      const getAllUsers = async () => {
+        let usersData = await fetch("http://localhost:8080/users")
+        let usersProfiles = await usersData.json();
         //console.log(ownersProfiles);
-       setOwners(ownersProfiles.data.owners);
+       setUsers(usersProfiles.data.users);
       }
-   getAllOwners();
+   getAllUsers();
   }, []);
 
 //create
     const handleSubmit = async (e) =>{
         e.preventDefault();
-        let newOwnerData = await fetch("http://localhost:8080/owners/add", {
+        let newUserData = await fetch("http://localhost:8080/users/add", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({profile, img, type, time, location, price, summary, description})
         })
-        let newOwner = await newOwnerData.json();
+        let newUser = await newUserData.json();
 
-    console.log(newOwner);
+    console.log(newUser);
 }
 return (
     <div className='App'>
@@ -94,18 +94,19 @@ return (
             <button className="btn btn-dark" type="Submit">Create Profile</button>
         </form>
 
-        {owners.map((owners, idx) => {
+        {users.map((users, idx) => {
             return(
                 <div key={idx}>
-                    
-                    <h3>{owners.profile}</h3>
-                    <img className="img" src={owners.img}></img>
-                    <h6>{owners.type}</h6>
-                    <h6>{owners.time}</h6>
-                    <p>{owners.location}</p>
-                    <p>{owners.price}</p>
-                    <p>{owners.summary}</p>
-                    <p>{owners.description}</p>
+                    <h3>{users.username}</h3>
+                    <h3>{users.email}</h3>
+                    <h3>{users.profile}</h3>
+                    <img className="img" src={users.img}></img>
+                    <h6>{users.type}</h6>
+                    <h6>{users.time}</h6>
+                    <p>{users.location}</p>
+                    <p>{users.price}</p>
+                    <p>{users.summary}</p>
+                    <p>{users.description}</p>
                 </div>
             )
         })}
