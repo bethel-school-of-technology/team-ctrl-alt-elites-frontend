@@ -94,7 +94,7 @@ return (
                 onChange={e => setDescription(e.target.value)}/>
             <br />
             <br />
-            <button className="btn btn-dark" type="Submit"> <Link to='/sr'>Create Profile</Link> </button>
+            <button className="btn btn-dark" type="Submit"> {/*<Link to='/sr'>Create Profile</Link>*/} </button>
             
         </form>
         </div>

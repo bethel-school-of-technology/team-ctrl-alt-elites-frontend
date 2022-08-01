@@ -35,11 +35,10 @@ const EditProfile = (props) => {
 //replace below lines when props past in with token (lines const toke and if !token and const option)
 
     //not token as of yet from users
-    // const token = localStorage.getItem('myJWT');
-
-    // if (!token) {
-    //    navigate('/login');
-    //  }
+     const token = localStorage.getItem('myJWT');
+    console.log(token);
+    
+    //localStorage.setItem('myJWT', token);
 
    //    const options = {
    //     headers: {
@@ -48,27 +47,27 @@ const EditProfile = (props) => {
     //   }
 
 //replace all above to relpace below with:
-    //const options ={
-      //headers: {
-        //'Authorization': `Bearer ${props.token}`
-      //}
-   // }
-
+    const options ={
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    }
+    console.log(options);
 
     const url = `http://localhost:8080/users/update/${id}`
     //added const token and const options as well as commenting out const token = result.data.token; below
-    axios.put(url, req).then(result => {
-      //const token = result.data.token;
-       //localStorage.setItem('myJWT', token);
-      //history.push('/One')
-      //navigate( '/one');
+    axios.put(url, req, options).then(result => {
+     
+      
       console.log(result.data);
+      console.log(options);
       navigate(`/${id}`);
     },
       err => {
         localStorage.removeItem('myJWT');
-        props.navigate('/login');
-      });
+        navigate('/login');
+      }
+      );
     }
   };
 
@@ -96,26 +95,24 @@ const EditProfile = (props) => {
   const deleteUsers = () => {
     console.log('Bye!');
      //not token as of yet from Users
-     //const token = localStorage.getItem('myJWT');
+     const token = localStorage.getItem('myJWT');
 
 
-      //if (!token) {
-      //   navigate('/login');
-      // }
+      if (!token) {
+        navigate('/login');
+       }
 
-      // const options = {
-      //    headers: {
-      //        'Authorization': `Bearer ${token}`
-      //      }
-     //   }
+       const options = {
+          headers: {
+              'Authorization': `Bearer ${token}`
+            }
+        }
 
     const url = `http://localhost:8080/users/delete/${id}`
     //added const token and const options as well as commenting out const token = result.data.token; below
-    axios.delete(url, /*options*/).then(result => {
-    //  const token = result.data.token;
-    //   localStorage.setItem('myJWT', token);
-      //history.push('/One')
-      //navigate( '/one');
+    axios.delete(url, options).then(result => {
+     
+      
       console.log(result.data);
       navigate(`/`);
     },
