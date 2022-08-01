@@ -11,7 +11,8 @@ const Login = () => {
 
   //assign to id the id that was created for the user linked to an event..;
   let { id } = useParams
-
+  console.log(id);
+  
   const signIn = (e) => {
     e.preventDefault();
     console.log("sign in!")
@@ -29,7 +30,7 @@ const Login = () => {
         localStorage.setItem('myJWT', token);
         //history.push('/One')
         navigate('/' + id);
-        console.log(result.data);
+        console.log(result.data.token);
 
 
       })
